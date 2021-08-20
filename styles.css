@@ -205,7 +205,6 @@ body {
     .container-unstyled {
         position: fixed;
         left: 50%;
-        /* bring your own prefixes */
         transform: translate(-50%);
     }
 
@@ -215,5 +214,9 @@ body {
 
     #header-nav {
         height: 230px;
+    }
+
+    #rest-text {
+        margin-top: 7px;
     }
 }
