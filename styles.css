@@ -15,7 +15,7 @@ body {
     box-shadow: 2px 2px 7px #e2e2e2;
 }
 
-.container {
+.container-unstyled {
     margin-top: 25px;
     white-space: nowrap;
 }
@@ -118,6 +118,7 @@ body {
     border-radius: 5px;
 }
 
+/* big screen to not contain the navigation dropdown */
 @media (min-width: 772px) {
     .dropdown {
         display: none;
@@ -131,13 +132,15 @@ body {
 
     /* Style The Dropdown Button */
     .dropbtn {
+        border-radius: 5px;
         background-color: white;
         color: #7a9e8d;
-        border:none;
-        padding: 16px;
-        font-size: 26px;
+        margin-top: 15px;
+        border: none;
+        padding: 7px;
+        font-size: 20px;
         cursor: pointer;
-        transition: 0.1s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
 
     /* The container <div> - needed to position the dropdown content */
@@ -189,9 +192,28 @@ body {
     .dropdown:hover .dropbtn {
         color: white;
         display: block;
-        border-radius: 50%;
+        border-radius: 5px;
         background-color: #7a9e8d;
-        border:1px solid #597f6c;
-        transition: 0.5s ease-out;
+        border: 1px solid #597f6c;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+
+/* very big screens */
+@media (min-width: 992px) {
+    .container-unstyled {
+        position: fixed;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%);
+    }
+
+    .navigation {
+        margin: 10px;
+    }
+
+    #header-nav {
+        height: 230px;
     }
 }
