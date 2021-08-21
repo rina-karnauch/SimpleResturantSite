@@ -15,7 +15,7 @@ body {
     background-color: #ffffff;
     margin-top: 15px;
     color: #8b8b8b;
-    width:100%;
+    width: 100%;
     box-shadow: 2px 2px 7px #e2e2e2;
 }
 
@@ -26,18 +26,98 @@ body {
     padding: 10px;
 }
 
-.left, .right {
-    width: 25%;
+.col-3 {
+    width: 33%;
+    margin-top: 10px;
 }
 
-.middle {
-    width: 50%;
+.col-small {
+    width: 40%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    display: table;
-    clear: both;
+.col-big {
+    width: 60%;
+}
+
+/* footer buttons */
+.footer-button {
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #e7ece7;
+    transition: 0.5s;
+    /* for hover purposes */
+    position: relative;
+    display: inline-block;
+    border:1px solid #d2d2d2;
+}
+
+.footer-button:hover {
+    background-color: #c26868;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    color: #e0e0e0;
+    border: 1px solid #e7ece7;
+    transition: 0.5s;
+}
+
+.footer-button-dropdown {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 250px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid #d1d6ce;
+    color: #afb4ae;
+    transition: 0.5s;
+}
+
+.footer-buttons {
+    position: absolute;
+    background-color: #e7ece7;
+    transition: 0.5s;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #cbcbcb;
+}
+
+.footer-buttons .footer-rows {
+    display: none;
+}
+
+.footer-buttons:hover {
+    background-color: #e8e8e8;
+    transition: 0.5s;
+    width: 150px;
+    margin-left: 20px;
+    border: 1px solid #cbcbcb;
+    margin-bottom: 0;
+}
+
+.footer-buttons:hover .footer-rows {
+    display: block;
+    margin: 10px;
+}
+
+.footer-info {
+    text-align: center;
+    display: block;
+}
+
+.footer-button:hover .footer-button-dropdown {
+    display: block;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.footer-button:hover .footer-info {
+    display: none;
 }
 
 /* map object*/
@@ -67,8 +147,7 @@ body {
  and on bigger, navigation buttons*/
 .dropdown, .navigation {
     float: right;
-    margin-right: 40px;
-    margin-top: -70px;
+    margin-right: 50px;
 }
 
 /* navigation signs and links */
@@ -80,7 +159,7 @@ body {
 /* emojis of navigation options on bigger screens*/
 .emoji {
     text-align: center;
-    font-size: 27px;
+    font-size: 20px;
     padding: 7px;
 }
 
@@ -127,9 +206,9 @@ body {
     font-family: 'Oxygen', sans-serif;
     text-shadow: 1px 1px 1px #616161;
     color: #547666;
+    float: left;
     font-weight: bolder;
     font-size: 25px;
-    margin-top: 35px;
     transition: all 0.5s;
     white-space: nowrap;
 }
@@ -160,17 +239,28 @@ body {
 /* phone call button */
 #phone a {
     color: #222322;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s;
 
 }
 
 #phone:hover a {
     color: white;
     background: #7a9e8d;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s;
     border-radius: 5px;
 }
 
+@media (max-width: 660px) {
+    #rest-text, #certified-text {
+        display: none;
+    }
+}
+
+@media (max-width: 228px) {
+    #logo-img {
+        display: none;
+    }
+}
 
 /* minimal size */
 @media (max-width: 479px) {
@@ -187,7 +277,7 @@ body {
 }
 
 /* big screen to not contain the navigation dropdown */
-@media (min-width: 769px) {
+@media (min-width: 835px) {
     .dropdown {
         display: none;
     }
@@ -197,7 +287,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 834px) {
 
     .call-us-header {
         background-color: #8193a2;
@@ -233,20 +323,20 @@ body {
 
     /* Style The Dropdown Button */
     .dropbtn {
-        border-radius: 5px;
+        padding: 7px 12px;
+        border-radius: 10px;
         background-color: white;
         color: #7a9e8d;
         margin-top: 15px;
         border: none;
-        padding: 7px;
         font-size: 20px;
         cursor: pointer;
-        transition: 0.5s ease-in-out;
+        transition: 0.5s;
     }
 
     /* The container <div> - needed to position the dropdown content */
     .dropdown {
-        transition: 5s ease-in-out;
+        transition: 0.5s;
         position: relative;
         display: inline-block;
     }
@@ -276,7 +366,7 @@ body {
 
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
-        transition: 0.3s ease-in-out;
+        transition: 0.3s;
         background-color: #ffffff;
         color: #6a8d7c;
         text-decoration: none;
@@ -293,7 +383,7 @@ body {
     .dropdown:hover .dropbtn {
         color: white;
         display: block;
-        border-radius: 5px;
+        border-radius: 10px;
         background-color: #7a9e8d;
         border: 1px solid #597f6c;
         transition: 0.5s ease-in-out;
@@ -301,7 +391,7 @@ body {
 }
 
 /* very big screens */
-@media (min-width: 992px) and (max-width: 769px) {
+@media (min-width: 992px) and (max-width: 835px) {
 
     .navigation {
         margin: 10px;
