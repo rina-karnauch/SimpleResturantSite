@@ -11,10 +11,6 @@ body {
     overflow: scroll;
 }
 
-.row-unstyled {
-    margin-right: 15px;
-}
-
 .footer {
     background-color: #ffffff;
     margin-top: 15px;
@@ -49,7 +45,6 @@ body {
     border-radius: 15px;
     margin: 5px;
     padding: 10px;
-    border: 1px solid #e7ece7;
     transition: 0.5s;
     /* for hover purposes */
     position: relative;
@@ -144,13 +139,13 @@ body {
 
 /* container of buttons and title */
 .container-unstyled {
-    margin-top: 25px;
     white-space: nowrap;
 }
 
 /* on smaller screen we have a dropdown
  and on bigger, navigation buttons*/
 .dropdown, .navigation {
+    margin-top: 20px;
     float: right;
     margin-right: 50px;
 }
@@ -182,9 +177,11 @@ body {
 /*}*/
 
 /* white header with logos */
-#header-nav {
+#header-unstyled {
     background-color: #ffffff;
-    height: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 140px;
     box-shadow: 2px 2px 7px #e2e2e2;
 }
 
@@ -196,7 +193,6 @@ body {
     float: left;
     margin-right: 10px;
     margin-left: 20px;
-    margin-top: -15px;
     transition: all 0.5s;
 }
 
@@ -212,6 +208,7 @@ body {
     text-shadow: 1px 1px 1px #616161;
     color: #547666;
     float: left;
+    margin-top: 20px;
     font-weight: bolder;
     font-size: 25px;
     transition: all 0.5s;
@@ -255,6 +252,20 @@ body {
     border-radius: 5px;
 }
 
+
+@media (max-width: 520px) {
+
+    .col-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
+    }
+
+}
+
 @media (max-width: 660px) {
     #rest-text, #certified-text {
         display: none;
@@ -265,10 +276,17 @@ body {
     #logo-img {
         display: none;
     }
+
+    #header-unstyled {
+        background-color: #ffffff;
+        width: 100%;
+        height: 120px;
+        box-shadow: 2px 2px 7px #e2e2e2;
+    }
 }
 
 /* minimal size */
-@media (max-width: 479px) {
+@media (max-width: 560px) {
     #rest-text {
         /*font-family: 'Lora', sans-serif;*/
         font-family: 'Oxygen', sans-serif;
@@ -278,6 +296,16 @@ body {
         font-size: 25px;
         margin-top: 32px;
         transition: all 0.5s;
+    }
+
+    /* very small screens */
+    .col-xs-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
     }
 }
 
@@ -402,7 +430,7 @@ body {
         margin: 10px;
     }
 
-    #header-nav {
+    #header-unstyled {
         height: 230px;
     }
 
@@ -472,3 +500,4 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
